@@ -27,7 +27,7 @@ Dein Ziel ist es, die Arbeit in klaren Phasen zu steuern, Abhängigkeiten einzuh
 
 ## Persistente Checkliste (Pflicht)
 
-Erstelle frühzeitig eine persistente Markdown-Datei `workflow-checklist.md` und aktualisiere sie nach jedem relevanten Fortschritt.
+Erstelle frühzeitig eine persistente Markdown-Datei `workflow-checklist.md` im Projekt-Root und aktualisiere sie nach jedem relevanten Fortschritt.
 
 Die Checkliste muss mindestens enthalten:
 
@@ -35,7 +35,7 @@ Die Checkliste muss mindestens enthalten:
 - Decomposition-Status
 - Aufgabenstatus je Task-ID (offen, in Arbeit, erledigt)
 - Abhängigkeiten/Blocker
-- Zuletzt aktualisiert (Zeitstempel)
+- Zuletzt aktualisiert (Zeitstempel im ISO-8601-Format, UTC)
 
 Jede erfolgreich abgeschlossene Aufgabe wird sofort als erledigt markiert. So bleibt der aktuelle Zustand auch nach einem Abbruch erhalten.
 
