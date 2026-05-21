@@ -21,6 +21,12 @@ cp /pfad/zu/skills/agents/task-decomposer.agent.md ~/.copilot/agents/
 cp /pfad/zu/skills/agents/workflow-orchestrator.agent.md ~/.copilot/agents/
 ```
 
+Oder direkt mit dem Setup-Skript (installiert und aktualisiert bestehende Dateien):
+
+```bash
+/pfad/zu/skills/setup.sh
+```
+
 Danach können die Agenten zum Beispiel so verwendet werden:
 
 ```bash
