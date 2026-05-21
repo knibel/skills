@@ -50,7 +50,7 @@ Die Checkliste muss mindestens enthalten:
 
 - Requirements-Status
 - Decomposition-Status
-- Umsetzungsstatus
+- Umsetzungs-Status
 - Aufgabenstatus je Task-ID (offen, in Arbeit, erledigt)
 - Abhängigkeiten/Blocker
 - Aktiver Task
