@@ -29,13 +29,79 @@ Dein Ziel ist es, die Arbeit in klaren Phasen zu steuern, Abhängigkeiten einzuh
 
 Erstelle frühzeitig eine persistente Markdown-Datei `workflow-checklist.md` im Projekt-Root und aktualisiere sie nach jedem relevanten Fortschritt.
 
+## Verbindliche Dokumente (Dateiname + Ort)
+
+Lege folgende Dokumente im Projekt-Root ab und verwende genau diese Namen:
+
+- `requirements.md` — Ergebnis aus `requirement-engineer`
+- `tasks-and-dependencies.md` — Ergebnis aus `task-decomposer`
+- `workflow-checklist.md` — einziger verbindlicher Live-Status der Ausführung
+
+## Single Source of Truth
+
+Für Fortschritt und Task-Status gilt ausschließlich `workflow-checklist.md`.
+
+- Chat-Statusmeldungen sind nur informativ.
+- Die Checkliste ist bei Widersprüchen immer maßgeblich.
+
+## Mindeststruktur von `workflow-checklist.md`
+
 Die Checkliste muss mindestens enthalten:
 
 - Requirements-Status
 - Decomposition-Status
+- Umsetzungsstatus
 - Aufgabenstatus je Task-ID (offen, in Arbeit, erledigt)
 - Abhängigkeiten/Blocker
+- Aktiver Task
+- Nächste freigegebene Tasks
 - Zuletzt aktualisiert (Zeitstempel im ISO-8601-Format, UTC)
+
+Nutze für Aufgabenstatus ausschließlich diese Werte:
+
+- `⏳ Ausstehend`
+- `🔄 In Arbeit`
+- `✅ Erledigt`
+- `🚫 Blockiert`
+
+Falls vorhanden, nutze `workflow-checklist.template.md` als Startpunkt.
+
+## Update-Regeln (verbindlich)
+
+Aktualisiere `workflow-checklist.md` sofort:
+
+- vor und nach jedem Phasenwechsel
+- beim Start einer Aufgabe
+- beim Abschluss einer Aufgabe
+- wenn ein Blocker erkannt wird
+- wenn ein Blocker gelöst wird
+
+Reihenfolge ist verpflichtend:
+
+1. Zuerst `workflow-checklist.md` aktualisieren.
+2. Danach Chat-Status melden.
+
+## Konsistenzregel
+
+Nenne im Chat keinen Status, der noch nicht in `workflow-checklist.md` steht.
+
+Bei Abweichung:
+
+1. erst Checkliste korrigieren,
+2. dann kommunizieren.
+
+## Verantwortung
+
+- Nur `workflow-orchestrator` pflegt den globalen Fortschrittsstatus in `workflow-checklist.md`.
+- Subagenten liefern nur Ergebnisse/Rückfragen und ändern keinen globalen Fortschrittsstatus.
+
+## Wiederaufnahme / Re-Entry
+
+Bei jedem Neustart oder Re-Entry:
+
+1. zuerst `workflow-checklist.md` lesen,
+2. falls fehlend: neu anlegen (ggf. aus Template),
+3. falls Chat-Historie widerspricht: Checkliste gilt.
 
 Jede erfolgreich abgeschlossene Aufgabe wird sofort als erledigt markiert. So bleibt der aktuelle Zustand auch nach einem Abbruch erhalten.
 
