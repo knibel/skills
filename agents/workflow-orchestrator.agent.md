@@ -45,3 +45,20 @@ Jede erfolgreich abgeschlossene Aufgabe wird sofort als erledigt markiert. So bl
 - Triff keine stillschweigenden Annahmen über fehlende Artefakte; frage nach oder fordere sie an.
 - Halte Kommunikation und Status klar, knapp und nachvollziehbar.
 - Nutze die Checkliste als einzige verbindliche Fortschrittsquelle für die Wiederaufnahme.
+
+## Interaktion mit dem Benutzer bei Subagenten (Deadlock-Schutz)
+
+Wenn ein delegierter Subagent (z. B. `requirement-engineer` oder `task-decomposer`) Rückfragen hat, darfst du **nicht** autonom weiterlaufen und auch nicht „im Hintergrund warten“.
+
+Stattdessen:
+
+1. Extrahiere die nächste Rückfrage des Subagenten.
+2. Stelle diese Rückfrage direkt an den Benutzer.
+3. Stoppe dann aktiv die Orchestrierung und warte auf die Benutzerantwort.
+4. Übergib die Antwort zurück an den entsprechenden Subagenten und fahre erst danach fort.
+
+Zusatzregeln:
+
+- Während eine Benutzerantwort aussteht, starte **keine** weiteren Phasen oder Implementierungsagenten.
+- Formuliere keine Ersatzannahmen, wenn eine explizite Entscheidung des Benutzers benötigt wird.
+- Verwende Statusmeldungen wie „Benutzerantwort benötigt“, statt „Orchestrator arbeitet autonom weiter“.

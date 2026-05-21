@@ -4,9 +4,9 @@ Sammlung von lokal installierbaren Agent-Dateien.
 
 ## Verfügbare Agent-Dateien
 
-- `agents/requirement-engineer.agent.md` — führt ein strukturiertes Requirements-Interview, hinterfragt Annahmen, nennt sinnvolle Antwortoptionen mit Empfehlung und bietet anschließend die Erstellung eines Anforderungsdokuments an.
+- `agents/requirement-engineer.agent.md` — führt ein strukturiertes Requirements-Interview, hinterfragt Annahmen, nennt sinnvolle Antwortoptionen mit Empfehlung und bietet anschließend die Erstellung eines Anforderungsdokuments an; im Subagent-Modus gibt er Rückfragen explizit als `[USER_QUESTION] ... [/USER_QUESTION]` aus.
 - `agents/task-decomposer.agent.md` — zerlegt ein Anforderungsdokument in vertikale Schnitte (kleine, eigenständig testbare Features), identifiziert Abhängigkeiten zwischen den Aufgaben und erstellt ein strukturiertes Aufgaben- und Abhängigkeitsdokument mit Mermaid-Abhängigkeitsgraph und empfohlener Ausführungsreihenfolge.
-- `agents/workflow-orchestrator.agent.md` — koordiniert den Gesamtfluss: startet mit dem Requirement Engineer, übergibt danach an den Task Decomposer, steuert anschließend einfache Entwickler-Agenten gemäß Abhängigkeiten und dokumentiert jeden Fortschritt persistent in einer Checkliste.
+- `agents/workflow-orchestrator.agent.md` — koordiniert den Gesamtfluss: startet mit dem Requirement Engineer, übergibt danach an den Task Decomposer, steuert anschließend einfache Entwickler-Agenten gemäß Abhängigkeiten, dokumentiert jeden Fortschritt persistent in einer Checkliste und leitet Subagent-Rückfragen aktiv an den Benutzer weiter (Deadlock-Schutz).
 
 ## Lokale Installation
 
