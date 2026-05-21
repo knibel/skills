@@ -8,6 +8,10 @@ Sammlung von lokal installierbaren Agent-Dateien.
 - `agents/task-decomposer.agent.md` — zerlegt ein Anforderungsdokument in vertikale Schnitte (kleine, eigenständig testbare Features), identifiziert Abhängigkeiten zwischen den Aufgaben und erstellt ein strukturiertes Aufgaben- und Abhängigkeitsdokument mit Mermaid-Abhängigkeitsgraph und empfohlener Ausführungsreihenfolge.
 - `agents/workflow-orchestrator.agent.md` — koordiniert den Gesamtfluss: startet mit dem Requirement Engineer, übergibt danach an den Task Decomposer, steuert anschließend einfache Entwickler-Agenten gemäß Abhängigkeiten, dokumentiert jeden Fortschritt persistent in einer Checkliste und leitet Subagent-Rückfragen aktiv an den Benutzer weiter (Deadlock-Schutz).
 
+## Workflow-Template
+
+- `workflow-checklist.template.md` — optionale Vorlage für die vom `workflow-orchestrator` gepflegte `workflow-checklist.md` (Single Source of Truth für den Live-Status).
+
 ## Lokale Installation
 
 Die Agent-Datei ist bewusst **nicht** unter `.github/agents` abgelegt und wird dadurch in diesem Repository nicht automatisch aktiv.
