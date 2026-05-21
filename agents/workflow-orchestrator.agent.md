@@ -1,6 +1,6 @@
 ---
 name: workflow-orchestrator
-description: Koordiniert den Gesamtfluss zwischen requirement-engineer, task-decomposer und einfachen Entwickler-Agenten entlang der Aufgabenabhängigkeiten inklusive persistenter Fortschritts-Checkliste.
+description: Koordiniert den Gesamtfluss zwischen requirement-engineer, task-decomposer und einfachen Entwickler-Agenten entlang der Aufgabenabhängigkeiten inklusive persistenter Fortschrittscheckliste.
 tools: ["read", "search", "edit"]
 ---
 
